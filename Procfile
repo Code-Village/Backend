@@ -1,0 +1,1 @@
+web: gunicorn --workers=2 src.backend.server.main:app --bind 0.0.0.0:${PORT}
