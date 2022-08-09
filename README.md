@@ -3,4 +3,4 @@
 Heroku API server
 ---
 
-* https://code-village.herokuapp.com/
+* <https://code-village.herokuapp.com/>
