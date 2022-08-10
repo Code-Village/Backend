@@ -1,21 +1,15 @@
 import os
+from flask import Flask, jsonify
+from flask_restx import Api, Resource, reqparse
 from dotenv import load_dotenv
-from flask import Flask, request
+from api.hello import Hello
 
 load_dotenv()
 
 app = Flask(__name__)
-
-
-@app.route("/")
-def main():
-    return {"hello": "world!"}
-
-
-@app.route("/user")
-def user():
-    return {"name": "main"}
-
+app.config.SWAGGER_UI_DOC_EXPANSION = 'full'
+api = Api(app, version=0.1, title="Code Village", description="API for {Code Village}", terms_url="/",  contact="dltjrrbs2020@gmail.com", license='BSD 3-Clause "New" or "Revised" License')
+api.add_namespace(Hello, '/hello')
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", "5000"))
