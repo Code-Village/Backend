@@ -20,3 +20,4 @@ class TodoPost(Resource):
         return {
             '님이 적은 것': data
         }, 201
+        

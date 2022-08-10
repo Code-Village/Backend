@@ -2,7 +2,12 @@ import os
 from flask import Flask, jsonify
 from flask_restx import Api, Resource, reqparse
 from dotenv import load_dotenv
-from api.hello import Hello
+
+# heroku PATH
+from src.server.api.hello import Hello
+
+# localhost PATH
+# from api.hello import Hello 
 
 load_dotenv()
 
