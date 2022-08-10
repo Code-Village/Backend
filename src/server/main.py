@@ -8,7 +8,7 @@ load_dotenv()
 
 def createApp():
     app = Flask(__name__)
-    app.config.from_pyfile("config.py")
+    app.config.from_pyfile("../database/config.py")
 
     print(app.config)
 
