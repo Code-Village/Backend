@@ -11,7 +11,7 @@ hello_fields = Hello.model('Hello', {  # Model 객체 생성
 })
 
 @Hello.route('')
-class TodoPost(Resource):
+class HelloPost(Resource):
     @Hello.expect(hello_fields)
     @Hello.response(201, "Success")
     def post(self):
