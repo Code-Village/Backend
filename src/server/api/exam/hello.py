@@ -9,7 +9,7 @@ Hello = Namespace(
 )
 
 hello_fields = Hello.model('Hello', {  # Model 객체 생성
-    'data': fields.String(description='a Todo', required=True, example="님이 적은 것")
+    'data': fields.String(description='key', required=True, example="님이 적은 것")
 })
 
 @Hello.route('')
