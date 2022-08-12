@@ -3,7 +3,8 @@ from flask import Flask, jsonify
 from flask_restx import Api, Resource, reqparse
 from dotenv import load_dotenv
 
-from src.server.api.exam import *
+from src.server.api import *
+from src.server.api.user.nickname import Nickname
 
 load_dotenv()
 
@@ -19,7 +20,8 @@ api = Api(
     license='BSD 3-Clause "New" or "Revised" License'
 )
 
-api.add_namespace(Hello, '/hello')
+api.add_namespace(Hello, "/hello")
+api.add_namespace(Nickname, "/user/nickname")
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", "5000"))

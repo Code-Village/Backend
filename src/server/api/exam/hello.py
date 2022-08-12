@@ -1,5 +1,5 @@
 from flask import request
-from flask_restx import Resource, Api, Namespace, fields
+from flask_restx import Resource, Namespace, fields
 
 
 DATABASE = {"value": "아무튼 빅-데이터"}
