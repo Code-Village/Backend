@@ -1,11 +1,14 @@
 import os
-from flask import Flask, jsonify
-from flask_restx import Api, Resource, reqparse
+from flask import Flask
+from flask_restx import Api
 
 from src.server.api import *
 
 app = Flask(__name__)
-app.config.SWAGGER_UI_DOC_EXPANSION = 'full'
+
+# API 문서 전부 펼치기
+# app.config.SWAGGER_UI_DOC_EXPANSION = 'full'
+
 api = Api(
     app,
     version=0.1, 
