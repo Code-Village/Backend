@@ -88,7 +88,7 @@ class UserClass(Resource):
         """user를 삭제함"""
         args = request.args
         try:      
-            res = requests.put(self.DB_URL, params={'id': args['id']})    
+            res = requests.delete(self.DB_URL, params={'id': args['id']})    
             return switch(res.json()), res.json()
         except:
             return switch(500), 500

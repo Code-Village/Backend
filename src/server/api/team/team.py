@@ -107,7 +107,7 @@ class TeamClass(Resource):
         """해당 teamname을 가진 팀 삭제"""
         args = request.args
         try:      
-            res = requests.put(self.DB_URL, params={'teamname': args['teamname']})    
+            res = requests.delete(self.DB_URL, params={'teamname': args['teamname']})    
             return switch(res.json()), 200
         except:
             return switch(500), 500
