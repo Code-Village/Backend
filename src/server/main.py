@@ -21,7 +21,9 @@ api = Api(
 
 api.add_namespace(Hello, "/hello")
 api.add_namespace(User, "/user")
-api.add_namespace(Regist, "/user/regist")
+api.add_namespace(RegistUser, "/user/regist")
+api.add_namespace(Team, "/team")
+api.add_namespace(RegistTeam, "/team/regist")
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", "5000"))
